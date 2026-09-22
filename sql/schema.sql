@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS sales;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS stores;
+
 CREATE TABLE stores (
     store_id    INTEGER PRIMARY KEY,
     store_name  TEXT NOT NULL,
@@ -10,7 +14,7 @@ CREATE TABLE products (
     product_name    TEXT NOT NULL,
     category        TEXT NOT NULL,
     base_demand     REAL NOT NULL,
-    price           REAL NOT NULL,
+    price           REAL NOT NULL
 );
 
 CREATE TABLE sales (
@@ -22,7 +26,7 @@ CREATE TABLE sales (
     unit_price      REAL NOT NULL,
     revenue         REAL NOT NULL,
     promo_flag      INTEGER NOT NULL DEFAULT 0,
-    stockout_flag   INTEGER NOT NULL DEFAULT 0,
+    stockout_flag   INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE INDEX idx_sales_date ON sales(date);
