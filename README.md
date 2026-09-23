@@ -17,21 +17,23 @@ This project is actively in progress. Current state:
 Retail and e-commerce companies rely heavily on demand forecasting for inventory and staffing decisions, and I wanted a project that mirrored that real workflow end to end from a normalized SQL schema through exploratory queries to an actual forecast, rather than just a cleaned CSV and a model.fit() call. I generated the dataset synthetically so I could design specific, realistic wrinkles (stockouts capping observed demand, promotions confounding the trend) that are worth reasoning about even without a licensed dataset.
 
 ## Project structure
+```
 demand-forecasting-system/
-|--- data/
-|   |--- stores.csv
-|   |--- products.csv
-|   |--- sales.csv
-|   |--- demand-forecasting.db
-|--- sql/
-|   |--- schema.sql
-|   |--- analysis_queries.sql
-|--- notebooks/
-|   |--- demand_forecasting.ipynb
-|--- src
-|   |--- generate-data.py
-|--- requirements
-|--- README.md
+├── data/
+│   ├── stores.csv
+│   ├── products.csv
+│   ├── sales.csv
+│   └── demand_forecasting.db
+├── sql/
+│   ├── schema.sql
+│   └── analysis_queries.sql
+├── notebooks/
+│   └── demand_forecasting.ipynb
+├── src/
+│   └── generate-data.py
+├── requirements.txt
+└── README.md
+```
 
 ## Dataset
 
